@@ -21,7 +21,8 @@ The backtest procedure is as follows:
 (1) Initialize a window of observation signals with predetermined size at the beginning of the test set.
 (2) Compute a most likely state sequence given the model on that window using the Viterbi algorithm.
 (3) Let the last state of the Viterbi denote the predicted state at that time step 
-(4) "Slide" the window one time step and repeat (2) - (3) until the training set has been covered.
+(4) Move the window one time step 
+(5) Repeat (2) - (4) until the entire training set has been covered.
 (5) Compute the cumulative return over the period following the naiive strategy: Buy the close and sell tomorrow's close if the state is profitable, and do nothing if it is not. 
 
 (Notice that in the above procedure we miss some signals as we should avoid using data with which the model was trained on)
