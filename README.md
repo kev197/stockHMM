@@ -7,7 +7,7 @@ For example, in the case of determining a singular word we may choose to decompo
 
 Using yfinance to fetch stock data and the ta library to compute technical indicators. Define the observation vector as a list of preprocessed stock attributes and indicators. 
 
-We use the open-source library hmmlearn to implement a GMM approach. In this method we fit gaussian mixtures to each state's emission density and follow the usual EM procedure (Baum-Welch) applied to gaussian mixtures. 
+We use the open-source library hmmlearn to implement a GMM approach. In this method we fit gaussian mixtures to each state's emission density and follow the usual EM procedure (Baum-Welch) modified for gaussian mixtures. 
 
 Define 2 hidden states:
 - profitable/bull
