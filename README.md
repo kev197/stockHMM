@@ -1,9 +1,9 @@
-### stockHMM
+# stockHMM
 In many real world scenarios it is of interest to model some observable signal to better understand its underlying properties. For example, in the realm of speech processing we may have a spectrum of frequencies of some word or phrase captured over a period of time. Discretize these spectrums into finite sized continuous observation vectors using a decompression method and denote the sequence of vectors as the stochastic process {O_t}. It is of interest to identify the actual word or phrase spoken given such a sequence. 
 
 For example, in the case of determining a singular word we may choose to decompose a recording into a set of time-indexed spectral vectors {O_1, O_2, ... , O_T}. Then, we may describe some underlying embedded stochastic process that produced those signals as being a directed chain of phonems associated with the word. The application of the HMM aims to capture both 1. the number of possible phonems and 2. a characterization of what these hidden phonems (or more generally, whatever is producing the signals) are doing over time. We can do so by assigning the underlying process some number of distinct phonems (states) with associated state transitions i.e. a generic markov model. Then, we can attach probability distributions to each state that generate the observed signals given that state (in this case the vectors O_t), as well as attach an initial state distribution to the model itself. It remains to adjust the parameters of this model to maximize its likelihood of producing the sequence {O_1, O_2, ... , O_T}. This is done with an adjusted EM procedure, where we do constrained optimization for a lower bound on the log of the likelihood. 
 
-### Code
+# Code
 
 Using yfinance to fetch stock data and the ta library to compute technical indicators. Define the observation vector as a list of preprocessed stock attributes and indicators. 
 
@@ -37,9 +37,9 @@ Once the cumulative return using the naiive strategy has been determined, we can
 
 Using a data plotting library we can visualize the effectiveness of the strategy and adjust the model to our liking. 
 
-### Examples
+# Examples
 
-# Train AMD, Test AMD
+### Train AMD, Test AMD
 <img width="597" height="549" alt="image" src="https://github.com/user-attachments/assets/492382a3-13d0-42ee-9938-5d6e593a89a8" />
 
 <img width="585" height="148" alt="image" src="https://github.com/user-attachments/assets/358b079a-df47-4ede-a0a2-5c6092d208ec" />
@@ -68,7 +68,7 @@ annualized return of 14.13%.
 base seed for replication: 30352
 logistic regression acc vs hmm: 0.8876961189099918
 
-# Train AMD, Test TSLA
+### Train AMD, Test TSLA
 <img width="597" height="549" alt="image" src="https://github.com/user-attachments/assets/8d4e66e9-a475-4be1-8a7e-07185b1efbda" />
 
 <img width="585" height="148" alt="image" src="https://github.com/user-attachments/assets/a2c4ddd1-040e-473e-8768-73af163aa69f" />
@@ -100,7 +100,7 @@ logistic regression acc vs hmm: 0.878475798146241
 ALPHALPAALPHALPAALPHALPA
 you beat the naiive strategy by 355.63%
 
-# Train AMD, Test LOGI
+### Train AMD, Test LOGI
 <img width="597" height="549" alt="image" src="https://github.com/user-attachments/assets/fe1233f6-9c87-4fa8-bb08-c52c9684d4e9" />
 
 <img width="585" height="148" alt="image" src="https://github.com/user-attachments/assets/5e176dbd-a43c-45e3-92e0-a1a7fa277b4b" />
@@ -131,7 +131,7 @@ logistic regression acc vs hmm: 0.8744838976052849
 ALPHALPAALPHALPAALPHALPA
 you beat the naiive strategy by 86.33%
 
-### Summary
+# Summary
 Overall, the GMM is a fascinating way to model shifts in some latent state of a stock. 
 
 In some cases the model performs very well, beating the baseline and sometimes the S&P500. However, the model is often limited by a variety of factors
