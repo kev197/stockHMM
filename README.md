@@ -3,15 +3,15 @@ In many real world scenarios it is of interest to model some observable signal t
 
 For example, in the case of determining a singular word we may choose to decompose a recording into a set of time-indexed spectral vectors {O_1, O_2, ... , O_T}. Then, we may describe some underlying embedded stochastic process that produced those signals as being a directed chain of phonems associated with the word. The application of the HMM aims to capture both 1. the number of possible phonems and 2. a characterization of what these hidden phonems (or more generally, whatever is producing the signals) are doing over time. We can do so by assigning the underlying process some number of distinct phonems (states) with associated state transitions i.e. a generic markov model. Then, we can attach probability distributions to each state that generate the observed signals given that state (in this case the vectors O_t), as well as attach an initial state distribution to the model itself. It remains to adjust the parameters of this model to maximize its likelihood of producing the sequence {O_1, O_2, ... , O_T}. This is done with an adjusted EM procedure, where we do constrained optimization for a lower bound on the log of the likelihood. 
 
-### Description
-
-Define 2 states:
-- profitable/bull
-- unstable/bear
+### Code
 
 Using yfinance to fetch stock data and ta to compute technical indicators, define the signal vectors as a list of various preprocessed stock attributes and indicators. 
 
 We use the open-source library hmmlearn to implement a GMM approach. That is, fit gaussian mixtures to each state's emission density and use EM to maximize the likelihood of the model producing the time-indexed stochastic process of observable signals. 
+
+Define 2 hidden states:
+- profitable/bull
+- unstable/bear
 
 We derive intial estimates by repeatedly fitting random initializations of model parameters and selecting the parameters corresponding to the highest log likelihood. Since we random initialize, I do not assign fixed labels to each state but rather let the state that "learns" the larger 5d return be the profitable state. Let the 5d return of a state be the expected of the means of its emission density's mixture's returns. 
 
