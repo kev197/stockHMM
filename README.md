@@ -47,25 +47,39 @@ Using a data plotting library we can visualize the effectiveness of the strategy
 <img width="694" height="191" alt="image" src="https://github.com/user-attachments/assets/f378f401-2b0f-4df1-a476-06392e2407f6" />
 
 ****stats over 1151 trading days****
+
 trained with 2009-10-15 to 2020-09-17.
+
 backtested with 2020-12-14 to 2025-07-16.
+
 cumulative return of 74.95%.
+
 annualized return of 13.03%.
+
 there was a 50.83% chance you bought on a particular day.
+
 sharpe ratio of: 0.73
 
 Baseline returns:
+
 return captured from 2020-12-14 to 2025-07-16.
+
 cumulative return of 64.19%.
+
 annualized return of 11.47%.
+
 if you had bought/sold everyday: 69.80%.
 
 SPY returns:
+
 return captured from 2020-12-14 to 2025-07-16.
+
 cumulative return of 82.88%.
+
 annualized return of 14.13%.
 
 base seed for replication: 30352
+
 logistic regression acc vs hmm: 0.8876961189099918
 
 ### Train AMD, Test TSLA
@@ -77,27 +91,43 @@ logistic regression acc vs hmm: 0.8876961189099918
 
 
 ****stats over 911 trading days****
+
 trained with 2010-09-29 to 2021-08-31.
+
 backtested with 2021-11-26 to 2025-07-16.
+
 cumulative return of 341.63%.
+
 annualized return of 50.81%.
+
 there was a 47.31% chance you bought on a particular day.
+
 sharpe ratio of: 1.68
 
 Baseline returns:
+
 return captured from 2021-11-26 to 2025-07-16.
+
 cumulative return of -11.29%.
+
 annualized return of -3.26%.
+
 if you had bought/sold everyday: -14.00%.
 
 SPY returns:
+
 return captured from 2021-11-26 to 2025-07-16.
+
 cumulative return of 42.89%.
+
 annualized return of 10.38%.
 
 base seed for replication: 30352
+
 logistic regression acc vs hmm: 0.878475798146241
+
 ALPHALPAALPHALPAALPHALPA
+
 you beat the naiive strategy by 355.63%
 
 ### Train AMD, Test LOGI
@@ -108,27 +138,43 @@ you beat the naiive strategy by 355.63%
 <img width="694" height="191" alt="image" src="https://github.com/user-attachments/assets/e6fd8821-d785-4260-b3ae-5b38084c7871" />
 
 ****stats over 1151 trading days****
+
 trained with 2009-10-15 to 2020-09-17.
+
 backtested with 2020-12-14 to 2025-07-16.
+
 cumulative return of 99.09%.
+
 annualized return of 16.27%.
+
 there was a 54.47% chance you bought on a particular day.
+
 sharpe ratio of: 0.97
 
 Baseline returns:
+
 return captured from 2020-12-14 to 2025-07-16.
+
 cumulative return of 13.26%.
+
 annualized return of 2.76%.
+
 if you had bought/sold everyday: 12.76%.
 
 SPY returns:
+
 return captured from 2020-12-14 to 2025-07-16.
+
 cumulative return of 82.87%.
+
 annualized return of 14.13%.
 
 base seed for replication: 30352
+
 logistic regression acc vs hmm: 0.8744838976052849
+
 ALPHALPAALPHALPAALPHALPA
+
 you beat the naiive strategy by 86.33%
 
 # Summary
