@@ -5,7 +5,7 @@ For example, in the case of determining a singular word we may choose to decompo
 
 ### Code
 
-Using yfinance to fetch stock data and ta to compute technical indicators, define the signal vectors as a list of various preprocessed stock attributes and indicators. 
+Using yfinance to fetch stock data and the ta library to compute technical indicators. Define the observation vector as a list of preprocessed stock attributes and indicators. 
 
 We use the open-source library hmmlearn to implement a GMM approach. That is, fit gaussian mixtures to each state's emission density and use EM to maximize the likelihood of the model producing the time-indexed stochastic process of observable signals. 
 
