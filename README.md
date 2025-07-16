@@ -13,9 +13,9 @@ Define 2 hidden states:
 - profitable/bull
 - unstable/bear
 
-We derive intial estimates by repeatedly fitting random initializations of model parameters and selecting the parameters corresponding to the highest log likelihood. Since we random initialize, I do not assign fixed labels to each state but rather let the state that "learns" the larger 5d return be the profitable state. Let the 5d return of a state be the expected of the means of its emission density's mixture's returns. 
+We derive intial estimates by randomly selecting sets of parameters and picking the ones corresponding to the best log likelihood to find a good local maxima. Since we randomly initialize, I do not assign fixed labels to each state; Rather I let the state that learns to model larger returns be the profitable one. To determine this I calculate the expected value of the returns of each mixture within both states, then run a simple conditional check. 
 
-Then, we take the fitted models (trained with stock data from 2010 - mid 2021) and backtest on a time-disjoint set of signals from late 2021 to the present to avoid future leakage in the tests. 
+We take the fitted models (trained with stock data from 2010 - mid 2021) and backtest on a time-disjoint set of signals from late 2021 to the present to avoid future leakage in the tests. 
 
 The backtest procedure is as follows:
 (1) Initialize a window of observation signals with predetermined size at the beginning of the test set.
