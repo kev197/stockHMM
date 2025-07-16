@@ -29,7 +29,7 @@ The backtest procedure is as follows:
 
 (5) Repeat (2) - (4) until the entire training set has been covered.
 
-(5) Compute the cumulative return over the period following the naiive strategy: Buy the close and sell tomorrow's close if the state is profitable, and do nothing if it is not. 
+(5) Compute the cumulative return over the period following the naiive strategy: Buy the close and sell tomorrow's close if the state is profitable, or do nothing if it is not. 
 
 (Notice that in the above procedure we miss some signals as we should avoid using data with which the model was trained on)
 
